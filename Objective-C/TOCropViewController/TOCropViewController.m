@@ -71,13 +71,7 @@ static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
 
 @implementation TOCropViewController
 
-/////////////////
-- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
-{
-        UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
-        return  orientation;
-}
-/////////////////
+
 
 - (instancetype)initWithCroppingStyle:(TOCropViewCroppingStyle)style image:(UIImage *)image
 {
@@ -1267,4 +1261,11 @@ static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
     return self.cropView.minimumAspectRatio;
 }
 
+/////////////////
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+        UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+        return  orientation;
+}
+/////////////////
 @end
