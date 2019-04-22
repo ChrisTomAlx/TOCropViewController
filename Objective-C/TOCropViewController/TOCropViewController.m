@@ -71,6 +71,14 @@ static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
 
 @implementation TOCropViewController
 
+/////////////////
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+        UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+        return  orientation;
+}
+/////////////////
+
 - (instancetype)initWithCroppingStyle:(TOCropViewCroppingStyle)style image:(UIImage *)image
 {
     NSParameterAssert(image);
